@@ -173,5 +173,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(() => {
       currentSlide = (currentSlide + 1) % dots.length;
       showSlide();
-  }, 30000); // Change slide every 3 seconds
+  }, 3000); // Change slide every 3 seconds
 });
