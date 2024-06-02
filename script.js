@@ -144,7 +144,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 // script.js
-const slides = document.querySelector(".slider-images");
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelector(".slider-images");
   const dots = document.querySelectorAll(".dot");
   let currentSlide = 0;
 
@@ -173,5 +174,4 @@ const slides = document.querySelector(".slider-images");
       currentSlide = (currentSlide + 1) % dots.length;
       showSlide();
   }, 3000); // Change slide every 3 seconds
-
 });
