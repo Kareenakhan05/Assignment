@@ -479,7 +479,8 @@ transform : translateY(-40px);
 
 /* Slider section styling */
 /* Slider section styling */
-.what-we-do-slider {
+
+ .what-we-do-slider {
   position: relative;
   text-align: center;
   width: 100%;
@@ -488,86 +489,72 @@ transform : translateY(-40px);
 
 .slider-images {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .slide {
-  flex: 0 0 calc(33.33% - 20px); /* Adjust width to show 3 images with space */
-  margin: 0 10px; /* Space between slides */
-  box-sizing: border-box;
+  flex: 0 0 33.33%;
   position: relative;
+  transition: transform 0.5s ease;
 }
-
-
-.slide .image-wrapper {
-  position: relative;
-}
-
-.slide .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Overlay background */
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s; /* Add transition for smooth effect */
-}
-
-.slide .overlay-content {
-  text-align: center;
-}
-
-.slide .overlay-text {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.slide:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
-}
-.slide .overlay-content {
-  text-align: center;
-  position: relative; /* Make the content wrapper relative */
-}
-
-.slide .overlay-text {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.slide .read-more {
-  position: absolute;
-  bottom: 10px; /* Adjust the bottom distance */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 8px 20px;
-  background-color: #fc4381; /* Button background color */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.slide .read-more:hover {
-  background-color: #da6060; /* Button background color on hover */
-}
-
 
 .slide img {
   width: 100%;
   display: block;
-  transition: opacity 0.3s; /* Add transition for smooth effect */
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(252, 67, 129, 0.9); /* Pink color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.overlay-content {
+  text-align: center;
+  position: relative;
+}
+
+.overlay-text {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  background-color: white;
+  color: #fc4381;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #da6060;
+  color: white;
+}
+
+/* Hover effect */
+.slide:hover .overlay {
+  opacity: 1;
 }
 
 .slide:hover img {
-  opacity: 0; /* Hide image on hover */
+  opacity: 0;
 }
-
 
 /* Slider dots styling */
 .slider-dots {
@@ -589,6 +576,8 @@ transform : translateY(-40px);
 .slider-dots .dot.active {
   background-color: #da6060;
 }
+
+
 
 
 
